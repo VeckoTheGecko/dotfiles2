@@ -1,0 +1,57 @@
+version = 1
+
+[envs.numpydoc]
+channels = ["conda-forge"]
+dependencies = { numpydoc = "*" }
+exposed = { numpydoc = "numpydoc" }
+
+[envs.pixi-diff]
+channels = ["conda-forge"]
+dependencies = { pixi-diff = "*" }
+exposed = { pixi-diff = "pixi-diff" }
+
+[envs.pixi-diff-to-markdown]
+channels = ["conda-forge"]
+dependencies = { pixi-diff-to-markdown = "*" }
+exposed = { pixi-diff-to-markdown = "pixi-diff-to-markdown" }
+
+[envs.tldr]
+channels = ["conda-forge"]
+dependencies = { tldr = "*" }
+exposed = { tldr = "tldr" }
+
+[envs.pixi-browse]
+channels = ["conda-forge"]
+dependencies = { pixi-browse = "*" }
+exposed = { pixi-browse = "pixi-browse" }
+
+[envs.rattler-build]
+channels = ["conda-forge"]
+dependencies = { rattler-build = "*" }
+exposed = { rattler-build = "rattler-build" }
+
+[envs.pixi-gui]
+channels = ["https://prefix.dev/pixi-gui", "https://prefix.dev/conda-forge"]
+dependencies = { pixi-gui = "*" }
+exposed = { pixi-gui = "pixi-gui" }
+shortcuts = ["pixi-gui"]
+
+[envs.jujutsu]
+channels = ["conda-forge"]
+dependencies = { jujutsu = "==0.39.0" }
+exposed = { jj = "jj" }
+
+[envs.zizmor]
+channels = ["conda-forge"]
+dependencies = { zizmor = "*" }
+exposed = { zizmor = "zizmor" }
+
+[envs.git]
+channels = ["conda-forge"]
+dependencies = { git = "==2.51.0" }
+exposed = { git = "git", git-credential-osxkeychain = "git-credential-osxkeychain", git-cvsserver = "git-cvsserver", git-receive-pack = "git-receive-pack", git-shell = "git-shell", git-upload-archive = "git-upload-archive", git-upload-pack = "git-upload-pack", gitk = "gitk", scalar = "scalar" }
+
+[envs.gh]
+channels = ["conda-forge"]
+dependencies = { gh = "*" }
+exposed = { gh = "gh" }

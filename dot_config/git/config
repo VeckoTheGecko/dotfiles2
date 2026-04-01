@@ -1,0 +1,38 @@
+[alias]
+	ac = "!git add -u && git commit"
+	cleanup = "!git branch --merged | grep -v '^\\*|master|develop' | xargs -n1 -r git branch -d"
+	lg1 = "lg1-specific --all"
+	lg1-specific = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
+	lg2 = "lg2-specific --all"
+	lg2-specific = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+	lg3 = "lg3-specific --all"
+	lg3-specific = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'"
+
+[alias "safe"]
+	directory = "/etc/nixos"
+
+[core]
+	editor = "nvim"
+
+[fetch]
+	prune = true
+
+[gpg]
+	format = "openpgp"
+
+[gpg "openpgp"]
+	program = "/nix/store/16h0zihlynz10y5rdv2vb0clq7k555pk-gnupg-2.4.8/bin/gpg"
+
+[init]
+	defaultBranch = "main"
+
+[user]
+	email = "36369090+VeckoTheGecko@users.noreply.github.com"
+	name = "Vecko"
+[maintenance]
+	repo = /Users/Hodgs004/coding/repos/parcels
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

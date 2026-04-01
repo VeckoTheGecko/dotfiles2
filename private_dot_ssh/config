@@ -1,0 +1,51 @@
+Host virtualship
+    hostname 145.38.190.231
+    User nhodgskin
+    IdentityFile ~/.ssh/surf
+
+
+Host github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/uu-keys
+
+Host uu.nl
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/uu-keys
+
+
+
+Host lorenz gemini *.science.uu.nl !betaport.science.uu.nl
+   ProxyJump hodgs004@betaport.science.uu.nl
+   ServerAliveInterval 40
+   ForwardAgent yes
+ 
+Host gemini
+   hostname gemini.science.uu.nl
+   user hodgs004
+
+Host lorenz
+   hostname lorenz.science.uu.nl
+   user hodgs004
+  
+Host lorenz-compute
+   ForwardAgent yes
+   StrictHostKeyChecking no
+   UserKnownHostsFile=/dev/null
+   ProxyCommand ssh lorenz "/opt/slurm/bin/salloc --nodes=1 --mem=64G --cpus-per-task=1 --partition=normal --time=8:00:00 /bin/bash -c 'nc \$SLURM_NODELIST 22'"
+   User hodgs004
+
+Host lorenz-short
+   ForwardAgent yes
+   StrictHostKeyChecking no
+   UserKnownHostsFile=/dev/null
+   ProxyCommand ssh lorenz "/opt/slurm/bin/salloc --nodes=1 --mem=64G --cpus-per-task=1 --partition=short --time=3:00:00 /bin/bash -c 'nc \$SLURM_NODELIST 22'"
+   User hodgs004
+
+Host levanthe
+   user b383422
+   hostname levante.dkrz.de 
+   ForwardAgent yes
+   
+Host levanthe-hack
+   ForwardAgent yes
+   ProxyCommand ssh levanthe "salloc -p interactive -A bb1153 -n 1 -t 240 /bin/bash"
