@@ -55,3 +55,8 @@ exposed = { git = "git", git-credential-osxkeychain = "git-credential-osxkeychai
 channels = ["conda-forge"]
 dependencies = { gh = "*" }
 exposed = { gh = "gh" }
+
+[envs.zoxide]
+channels = ["conda-forge"]
+dependencies = { zoxide = "*" }
+exposed = { zoxide = "zoxide" }
