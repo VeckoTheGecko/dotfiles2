@@ -1,3 +1,7 @@
+# Add pixi global bin to PATH
+export PATH="$HOME/.pixi/bin:$PATH"
+export PATH="${HOME}/bin:$PATH"
+
 eval "$(starship init bash)"
 
 
@@ -15,10 +19,6 @@ export PATH
 alias wh=~/dotfiles/scripts/parse-work-hours.py
 
 {{- end }}
-
-# Add pixi global bin to PATH
-export PATH="$HOME/.pixi/bin:$PATH"
-export PATH="${HOME}/bin:$PATH"
 
 alias lz=lazygit
 eval "$(zoxide init zsh --cmd j)"
