@@ -1,15 +1,20 @@
 eval "$(starship init zsh)"
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# machine-specific configuration
+{{- if eq .chezmoi.hostname "work-laptop" }}
 
 [ -f "/Users/Hodgs004/.ghcup/env" ] && . "/Users/Hodgs004/.ghcup/env" # ghcup-env
 
 PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 export PATH
 alias wh=~/dotfiles/scripts/parse-work-hours.py
+
+{{- end }}
 
 # Add pixi global bin to PATH
 export PATH="$HOME/.pixi/bin:$PATH"
