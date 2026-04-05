@@ -60,3 +60,8 @@ exposed = { gh = "gh" }
 channels = ["conda-forge"]
 dependencies = { zoxide = "*" }
 exposed = { zoxide = "zoxide" }
+
+[envs.starship]
+channels = ["conda-forge"]
+dependencies = { starship = "*" }
+exposed = { starship = "starship" }
