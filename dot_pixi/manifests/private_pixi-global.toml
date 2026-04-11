@@ -49,7 +49,7 @@ exposed = { zizmor = "zizmor" }
 [envs.git]
 channels = ["conda-forge"]
 dependencies = { git = "==2.51.0" }
-exposed = { git = "git", git-credential-osxkeychain = "git-credential-osxkeychain", git-cvsserver = "git-cvsserver", git-receive-pack = "git-receive-pack", git-shell = "git-shell", git-upload-archive = "git-upload-archive", git-upload-pack = "git-upload-pack", gitk = "gitk", scalar = "scalar" }
+exposed = { git = "git", git-cvsserver = "git-cvsserver", git-receive-pack = "git-receive-pack", git-shell = "git-shell", git-upload-archive = "git-upload-archive", git-upload-pack = "git-upload-pack", gitk = "gitk", scalar = "scalar" }
 
 [envs.gh]
 channels = ["conda-forge"]
