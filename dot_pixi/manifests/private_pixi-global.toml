@@ -75,3 +75,13 @@ exposed = { idle3 = "idle3", "idle3.13" = "idle3.13", pydoc = "pydoc", pydoc3 = 
 channels = ["conda-forge"]
 dependencies = { yt-dlp = "*" }
 exposed = { yt-dlp = "yt-dlp" }
+
+[envs.lefthook]
+channels = ["conda-forge"]
+dependencies = { lefthook = "*" }
+exposed = { lefthook = "lefthook" }
+
+[envs.prek]
+channels = ["conda-forge"]
+dependencies = { prek = "*" }
+exposed = { prek = "prek" }
