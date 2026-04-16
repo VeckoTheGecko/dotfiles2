@@ -95,3 +95,8 @@ exposed = { tomlq = "tomlq", yq = "yq", xq = "xq" }
 channels = ["conda-forge"]
 dependencies = { jq = "*" }
 exposed = { jq = "jq" }
+
+[envs.carapace]
+channels = ["conda-forge"]
+dependencies = { carapace = "*" }
+exposed = { carapace = "carapace" }
