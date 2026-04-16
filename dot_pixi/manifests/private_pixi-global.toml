@@ -85,3 +85,13 @@ exposed = { lefthook = "lefthook" }
 channels = ["conda-forge"]
 dependencies = { prek = "*" }
 exposed = { prek = "prek" }
+
+[envs.yq]
+channels = ["conda-forge"]
+dependencies = { yq = "*" }
+exposed = { tomlq = "tomlq", yq = "yq", xq = "xq" }
+
+[envs.jq]
+channels = ["conda-forge"]
+dependencies = { jq = "*" }
+exposed = { jq = "jq" }
