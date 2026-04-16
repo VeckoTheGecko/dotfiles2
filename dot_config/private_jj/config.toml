@@ -1,0 +1,5 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "Vecko"
+email = "36369090+VeckoTheGecko@users.noreply.github.com"
