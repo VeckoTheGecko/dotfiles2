@@ -3,3 +3,6 @@
 [user]
 name = "Vecko"
 email = "36369090+VeckoTheGecko@users.noreply.github.com"
+
+[aliases]
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]

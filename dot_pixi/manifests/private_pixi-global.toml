@@ -100,3 +100,13 @@ exposed = { jq = "jq" }
 channels = ["conda-forge"]
 dependencies = { carapace = "*" }
 exposed = { carapace = "carapace" }
+
+[envs.viztracer]
+channels = ["conda-forge"]
+dependencies = { viztracer = "*" }
+exposed = { viztracer = "viztracer", vizviewer = "vizviewer" }
+
+[envs.snakeviz]
+channels = ["conda-forge"]
+dependencies = { snakeviz = "*" }
+exposed = { snakeviz = "snakeviz" }
